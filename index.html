@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="plot1.js" defer></script>
+    <script src="plot2.js" defer></script>
+    <script src="plot34.js" defer></script>
+    <script src="plot5.js" defer></script>
+    <script src="index.js" defer></script>
+    
+</head>
+<body>
+
+    <!-- <div class="icon">
+        <i class = "fa fa-arrow-alt-circle-down"></i>
+    </div> -->
+    </div>
+    <div class="layer1">
+        <div class="img"><img src="back.jpeg" alt=""></div>
+        <div class="text-center">
+            <h1>Gohan The Husky!</h1>
+            <p>A Journey through space and time</p>
+            <p>By - Arjun</p>
+        </div>
+    </div>
+    <div class="layer2 disappear">
+        <div class="title">
+            <h1>Gohan's Weight</h1>
+        </div>
+        <div class="back">
+        </div> 
+      <div class="cont">
+        <div id="chart1"></div>
+      </div>
+    </div>
+    <div class="layer3 disappear">
+        <div class="title">
+            <h1>School Time</h1>
+        </div>
+        <div class="back2"></div>
+        <div class="center">
+        <select id="typeSelect"></select>
+        </div>
+        <div class="cont">
+        <div id="chart2"></div>
+        </div>
+    </div>
+    <div class="layer4 disappear">
+        <div class="title">
+            <h1>Did Gohan Sleep through the Night?</h1>
+        </div>
+        <div class="images">
+            <img src="sleep1.jpeg" alt="">
+            <img src="sleep2.jpeg" alt="">
+            <img src="sleep3.jpeg" alt="">
+            <img src="sleep4.jpeg" alt="">
+            <img src="sleep5.jpeg" alt="">
+            <img src="sleep6.jpeg" alt="">
+            <img src="sleep7.jpeg" alt="">
+            <img src="sleep8.jpeg" alt="">
+            <img src="sleep9.jpeg" alt="">
+        </div>
+        <div class="cont">
+        <div id="chart4"></div>
+        </div>
+    </div>
+    <div class="layer5 disappear">
+        <div class="title">
+            <h1>Puppy Eras?</h1>
+        </div>
+        <div class="back3"></div>
+        <div class="cont">
+        <div id="chart3"></div>
+        </div>
+    </div>
+    <div class="layer6 disappear">
+        <div class="title">
+            <h1>Gohan, I choose you!</h1>
+        </div>
+        <div class="cont">
+            <svg id="my_dataviz" width="600" height="500"></svg>
+            <div id="tooltip" style="position: absolute; opacity: 0; background-color: white; border: 1px solid #ddd; padding: 10px; border-radius: 5px; pointer-events: none;"></div>
+        </div>
+    </div>
+    <div class="layer7">
+        <div class="title">
+            <h1>Has he been walking me?</h1>
+        </div>
+        <div class="image">
+            <img src="overall.png" alt="">
+        </div>
+    </div>
+    <div class="layer8">
+        <div class="title">
+            <h1>Have i been eating healthier?</h1>
+        </div>
+        <div class="single">
+            <img src="health.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="layer9">
+        <div class="title">
+            <h1>Am I Happier?</h1>
+        </div>
+        <div class="single">
+            <img src="hex.png" alt="">
+        </div>
+    </div>
+    <div class="layer10" onclick="startIframe()">
+        <div class="title">
+            <h1>So, What do I think?</h1>
+        </div>
+        <div class="single">
+            <iframe src="cloud.html" frameborder="0" id = "myIframe"></iframe>
+        </div>
+    </div>
+    <div class="layer11">
+        <div class="title">
+            <h1>Why I hate Game of Thrones</h1>
+        </div>
+        <div class="single">
+            <img src="got.gif" alt="">
+        </div>
+    </div>
+    <div class="layer12">
+        <div class="title">
+            <h1>Texas Husky Rescue</h1>
+        </div>
+        <div class="single">
+            <img src="huskies_euth.png" alt="">
+        </div>
+    </div>
+    <div class="layer13">
+        <div class="title">
+            <h1>Not so Obedient</h1>
+        </div>
+        <div class="single">
+            <img src="obedientvsreqtime.png" alt="">
+        </div>
+    </div>
+    <div class="layer14">
+        <div class="bye"></div>
+    </div>
+    <div class="layer15">
+        <div class="text">
+            <p>Don't be Like Me!</p>
+            <p>Adopt, Do Not Shop!</p>
+            <p>By - Arjun</p>
+    </div>
+</body>
+</html>
